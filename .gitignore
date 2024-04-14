@@ -9,7 +9,6 @@ target/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
-.idea
 *.iws
 *.iml
 *.ipr
@@ -23,7 +22,6 @@ target/
 .settings
 .springBeans
 .sts4-cache
-.idea
 
 ### NetBeans ###
 /nbproject/private/
@@ -37,8 +35,6 @@ build/
 
 ### VS Code ###
 .vscode/
-.idea
 
 ### Mac OS ###
 .DS_Store
-.idea
