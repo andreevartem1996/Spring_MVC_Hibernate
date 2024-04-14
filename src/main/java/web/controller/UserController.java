@@ -47,6 +47,7 @@ public class UserController {
     public String updateUserForm(@RequestParam("userId") int userId, Model model) {
         User user = userService.getUserById(userId);
         model.addAttribute("user", user);
+        userService.deleteUser(userId);
         return "update";
     }
 
