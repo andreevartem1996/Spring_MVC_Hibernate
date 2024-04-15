@@ -7,29 +7,28 @@
 <body>
 <div align="center">
     <h2>Table Users</h2>
-
     <h3><a href="/add">Add New User</a></h3>
-
-<table border="1" cellpadding="4">
-    <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Action</th>
-    </tr>
-
-    <tr th:each="user : ${users}">
-        <td th:utext="${user.id}"></td>
-        <td th:utext="${user.name}"></td>
-        <td th:utext="${user.age}"></td>
-        <td>
-            <a th:href="@{/update(userId=${user.id})}">Update</a>
-            <a th:href="@{/delete(userId=${user.id})}">Delete</a>
-        </td>
-    </tr>
-
-</table>
-
+    <table border="1" cellpadding="4">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Action</th>
+        </tr>
+        <tr th:each="user : ${users}">
+            <td th:utext="${user.id}"></td>
+            <td th:utext="${user.name}"></td>
+            <td th:utext="${user.age}"></td>
+            <td>
+                <a th:href="@{/update(userId=${user.id})}">Update</a> or
+                <br>
+                <form th:action="@{/delete(userId=${user.id})}" th:object="${user}" th:method="POST">
+                    <br>
+                    <input type="submit" value="Delete">
+                </form>
+            </td>
+        </tr>
+    </table>
 </div>
 </body>
 </html>

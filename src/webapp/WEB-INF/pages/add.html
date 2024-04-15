@@ -8,12 +8,13 @@
 <div align="center">
     <h2>Add New User</h2>
 
-<h3><a href="/">Table User</a></h3>
+    <h3><a href="/">Table User</a></h3>
 
     <form th:action="@{/}" th:object="${user}" method="post">
         Name: <input type="text" th:field="*{name}"><br>
         <br>
         Age: <input type="text" th:field="*{age}"><br>
+        <br>
         <input type="submit" value="Submit">
         <br>
     </form>
